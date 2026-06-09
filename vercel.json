@@ -1,22 +1,9 @@
 {
-  "version": 2,
-  "$comment": "garcia-oderli/ritmoprod → auto-sync via GitHub Actions",
-  "buildCommand": "vite build && cp esteira_operador.html dist/ && cp esteira_tv.html dist/ && cp simulacoes.html dist/ && cp programacao.html dist/",
-  "outputDirectory": "dist",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
   "routes": [
-    { "src": "/operador",     "dest": "/esteira_operador.html" },
-    { "src": "/tv",           "dest": "/esteira_tv.html"      },
-    { "src": "/simulacoes",   "dest": "/simulacoes.html"      },
-    { "src": "/programacao",  "dest": "/programacao.html"     },
-    { "src": "/(.*)",         "dest": "/$1"                   }
+    { "src": "/operador",    "dest": "/esteira_operador.html" },
+    { "src": "/tv",          "dest": "/esteira_tv.html"       },
+    { "src": "/simulacoes",  "dest": "/simulacoes.html"       },
+    { "src": "/programacao", "dest": "/programacao.html"      },
+    { "src": "/(.*)",        "dest": "/$1"                    }
   ]
 }
